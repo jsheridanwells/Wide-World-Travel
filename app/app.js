@@ -9,17 +9,3 @@ app.config(($routeProvider) => {
 	})
 	.otherwise('/');
 });
-
-app.factory('BookFactory', function($q, $http){
-	let getBooks = function() {
-		console.log("getBooks firing");
-		return $q((resolve, reject) => {
-			$http.get('../data/guides.json')
-			.then((books) => {resolve(books.data.guides);})
-			.catch((error) => {
-				reject(error);
-			});
-		});
-	};
-	return {getBooks};
-});
