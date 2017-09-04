@@ -1,0 +1,9 @@
+<div class="books">
+	<div class="row">
+		<div class="col-sm-4" ng-repeat="book in booksArr">
+			<p><strong>{{book.title}}</strong></p>
+			<p>{{book.type}}</p>
+			<p>{{book.price.toFixed(2)}}</p>
+		</div>
+	</div>
+</div>

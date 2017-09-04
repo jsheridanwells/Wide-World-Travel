@@ -8,15 +8,8 @@
 <body>
 	<div class="container" ng-app="Books">
 		<h1>Wide World Travel Books</h1>
-		<div class="books" ng-controller="bookCtrl" >
-			<div class="row" ng-repeat="book in booksArr">
-				<div class="col-sm-4">
-					<p><strong>{{book.title}}</strong></p>
-					<p>{{book.type}}</p>
-					<p>{{book.price.toFixed(2)}}</p>
-				</div>
-			</div>
-		</div>
+		<h2>See the <a ng-href="#!/guides">books</a></h2>
+		<div ng-view></div>
 
 	</div>
 	<!-- Bootstrap -->
